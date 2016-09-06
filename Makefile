@@ -3,9 +3,13 @@
 #
 # Project Name: ESPA RPM Building
 #-----------------------------------------------------------------------------
-.PHONY: check-environment all install clean product-formatter cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd
+.PHONY: check-environment all install clean product-formatter cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc
 
 all:
+
+base: product-formatter
+
+science: cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc
 
 install:
 
@@ -32,6 +36,15 @@ surface-water-extent-dswe: check-environment
 
 surface-water-extent-cfbwd: check-environment
 	rpmbuild -bb --clean specs/espa-surface-water-extent-cfbwd.spec
+
+surface-reflectance: check-environment
+	rpmbuild -bb --clean specs/espa-surface-reflectance.spec
+
+surface-reflectance-ledaps: check-environment
+	rpmbuild -bb --clean specs/espa-surface-reflectance-ledaps.spec
+
+surface-reflectance-lasrc: check-environment
+	rpmbuild -bb --clean specs/espa-surface-reflectance-lasrc.spec
 
 
 
