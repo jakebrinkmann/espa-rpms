@@ -71,5 +71,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Tue Jun 21 2016 Adam J Dosch <adosch@usgs.gov>
-- Initial Version for August 2016 release
+* Tue Sep 06 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.12.0
