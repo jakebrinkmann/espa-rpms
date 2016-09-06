@@ -31,6 +31,7 @@ BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
 BuildRequires:	espa-product-formatter >= 1.9.0
+Requires:	espa-surface-water-extent >= 1.0.0
 
 %description
 Provides science application executables for generating surface water extent products based on CFmask water detection for Landsat 4, 5, 7, and 8.  This application is implementated in C.
