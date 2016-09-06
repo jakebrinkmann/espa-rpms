@@ -3,7 +3,7 @@
 #
 # Project Name: ESPA RPM Building
 #-----------------------------------------------------------------------------
-.PHONY: check-environment all install clean product-formatter cloud-masking elevation
+.PHONY: check-environment all install clean product-formatter cloud-masking elevation spectral-indices
 
 all:
 
@@ -20,6 +20,9 @@ cloud-masking: check-environment
 
 elevation: check-environment
 	rpmbuild -bb --clean specs/espa-elevation.spec
+
+spectral-indices: check-environment
+	rpmbuild -bb --clean specs/espa-spectral-indices.spec
 
 
 
