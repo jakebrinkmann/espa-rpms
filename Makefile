@@ -3,7 +3,7 @@
 #
 # Project Name: ESPA RPM Building
 #-----------------------------------------------------------------------------
-.PHONY: check-environment all install clean product-formatter cloud-masking elevation spectral-indices
+.PHONY: check-environment all install clean product-formatter cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd
 
 all:
 
@@ -23,6 +23,15 @@ elevation: check-environment
 
 spectral-indices: check-environment
 	rpmbuild -bb --clean specs/espa-spectral-indices.spec
+
+surface-water-extent: check-environment
+	rpmbuild -bb --clean specs/espa-surface-water-extent.spec
+
+surface-water-extent-dswe: check-environment
+	rpmbuild -bb --clean specs/espa-surface-water-extent-dswe.spec
+
+surface-water-extent-cfbwd: check-environment
+	rpmbuild -bb --clean specs/espa-surface-water-extent-cfbwd.spec
 
 
 
