@@ -8,7 +8,7 @@
 %define algorithm schemas
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname NOT_USED_YET
+%define tagname dev_v1.9.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -68,6 +68,6 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Jun 22 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for August 2016 release
+* Tue Sep 13 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for Oct 2016 release
 

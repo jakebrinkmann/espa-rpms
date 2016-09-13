@@ -3,11 +3,13 @@
 #
 # Project Name: ESPA RPM Building
 #-----------------------------------------------------------------------------
-.PHONY: check-environment all install clean product-formatter cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc land-surface-temperature land-surface-temperature-rit
+.PHONY: check-environment all base schemas science install clean product-formatter product-formatter-schemas cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc land-surface-temperature land-surface-temperature-rit
 
 all:
 
 base: product-formatter
+
+schemas: product-formatter-schemas
 
 science: cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc land-surface-temperature land-surface-temperature-rit
 
@@ -18,6 +20,9 @@ clean:
 #-----------------------------------------------------------------------------
 product-formatter: check-environment
 	rpmbuild -bb --clean specs/espa-product-formatter.spec
+
+product-formatter-schemas: check-environment
+	rpmbuild -bb --clean specs/espa-espa-product-formatter-schemas.spec
 
 cloud-masking: check-environment
 	rpmbuild -bb --clean specs/espa-cfmask.spec
