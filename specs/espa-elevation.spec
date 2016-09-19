@@ -18,7 +18,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}
 Version:	2.1.0
-Release:	1.%{build_timestamp}
+Release:	2.%{build_timestamp}
 Summary:	ESPA Elevation Software
 
 Group:		ESPA
