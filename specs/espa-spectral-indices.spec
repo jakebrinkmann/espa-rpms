@@ -18,7 +18,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}
 Version:	2.5.0
-Release:	3.%{build_timestamp}
+Release:	4.%{build_timestamp}
 Summary:	ESPA Spectral Indices Software
 
 Group:		ESPA

@@ -19,7 +19,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
 Version:	1.0.0
-Release:	3.%{build_timestamp}
+Release:	4.%{build_timestamp}
 Summary:	ESPA Surface Water Extent Software - CFBWD
 
 Group:		ESPA

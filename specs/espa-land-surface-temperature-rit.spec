@@ -19,7 +19,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
 Version:	0.0.4
-Release:	3.%{build_timestamp}
+Release:	4.%{build_timestamp}
 Summary:	ESPA Land Surface Temperature Software - RIT
 
 Group:		ESPA
