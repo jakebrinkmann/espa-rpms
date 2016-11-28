@@ -8,7 +8,7 @@
 %define project espa-surface-water-extent
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname 2016_Aug
+%define tagname dev_espa_v2.13.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -17,8 +17,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}
-Version:	1.0.0
-Release:	4.%{build_timestamp}
+Version:	1.0.1
+Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Water Extent Software
 
 Group:		ESPA
@@ -70,5 +70,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Tue Sep 06 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.12.0
+* Mon Nov 28 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.13.0
