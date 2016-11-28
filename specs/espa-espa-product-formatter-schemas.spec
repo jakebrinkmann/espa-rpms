@@ -8,7 +8,7 @@
 %define algorithm schemas
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_v1.9.0
+%define tagname dev_v1.10.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -68,6 +68,6 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Tue Sep 13 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for Oct 2016 release
+* Mon Nov 28 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.13.0
 
