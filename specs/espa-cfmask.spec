@@ -9,7 +9,7 @@
 %define algorithm cfmask
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname 2016_Aug
+%define tagname cfmask-version_2.0.1.1
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -18,8 +18,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	2.0.1
-Release:	4.%{build_timestamp}
+Version:	2.0.1.1
+Release:	1.%{build_timestamp}
 Summary:	ESPA Cloud Masking Software - CFmask
 
 Group:		ESPA
@@ -30,7 +30,7 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.9.0
+BuildRequires:	espa-product-formatter >= 1.10.0
 
 %description
 Provides science application executables for generating cloud masking products for Landsat 4, 5, 7, and 8.  These applications are implementated in C and Python.
@@ -73,5 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Fri Sep 02 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.12.0
+* Mon Nov 28 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.13.0
