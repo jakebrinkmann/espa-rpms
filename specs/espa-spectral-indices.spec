@@ -32,7 +32,7 @@ Packager:	USGS EROS LSRD
 BuildRequires:	espa-product-formatter >= 1.10.0
 
 %description
-Provides science application executables for generating spectral indice products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
+Provides science application executables for generating spectral index products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
 
 
 # ----------------------------------------------------------------------------
