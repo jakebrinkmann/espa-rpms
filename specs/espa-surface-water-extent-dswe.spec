@@ -18,8 +18,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	1.1.1
-Release:	5.%{build_timestamp}
+Version:	1.1.2
+Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Water Extent Software - DSWE
 
 Group:		ESPA
