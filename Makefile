@@ -3,7 +3,7 @@
 #
 # Project Name: ESPA RPM Building
 #-----------------------------------------------------------------------------
-.PHONY: check-environment all base schemas science install clean product-formatter product-formatter-schemas l2qa-tools cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc land-surface-temperature land-surface-temperature-rit
+.PHONY: check-environment all base schemas science install clean product-formatter product-formatter-schemas l2qa-tools cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc land-surface-temperature land-surface-temperature-rit land-surface-temperature-aux
 
 all:
 
@@ -12,6 +12,8 @@ base: product-formatter
 schemas: product-formatter-schemas
 
 science: l2qa-tools cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc land-surface-temperature land-surface-temperature-rit
+
+auxiliary: land-surface-temperature-aux
 
 install:
 
@@ -59,6 +61,9 @@ land-surface-temperature: check-environment
 
 land-surface-temperature-rit: check-environment
 	rpmbuild -bb --clean specs/espa-land-surface-temperature-rit.spec
+
+land-surface-temperature-aux: check-environment
+	rpmbuild -bb --clean specs/espa-land-surface-temperature-aux.spec
 
 #-----------------------------------------------------------------------------
 check-environment:
