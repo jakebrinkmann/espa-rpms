@@ -9,7 +9,7 @@
 %define algorithm rit
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname 2016_Aug-1
+%define tagname dev_v0.1.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -18,8 +18,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	0.0.4
-Release:	4.%{build_timestamp}
+Version:	0.1.0
+Release:	1.%{build_timestamp}
 Summary:	ESPA Land Surface Temperature Software - RIT
 
 Group:		ESPA
@@ -30,7 +30,7 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.9.0
+BuildRequires:	espa-product-formatter >= 1.10.0
 Requires:	espa-land-surface-temperature >= 1.0.0
 
 %description
@@ -73,5 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Tue Sep 06 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.12.0
+* Mon Dec 12 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.13.0
