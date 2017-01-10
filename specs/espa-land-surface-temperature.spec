@@ -17,8 +17,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}
-Version:	1.0.0
-Release:	5.%{build_timestamp}
+Version:	1.0.1
+Release:	1.%{build_timestamp}
 Summary:	ESPA Land Surface Temperature Software
 
 Group:		ESPA
@@ -69,5 +69,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Mon Dec 12 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.13.0
+* Fri Jan 06 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.14.0
