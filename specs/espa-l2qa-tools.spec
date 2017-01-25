@@ -8,7 +8,7 @@
 %define project espa-l2qa-tools
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_v1.1.0
+%define tagname dev_v1.2.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -17,7 +17,7 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}
-Version:	1.1.0
+Version:	1.2.0
 Release:	1.%{build_timestamp}
 Summary:	ESPA L2QA Tools Software
 
@@ -29,7 +29,7 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.10.0
+BuildRequires:	espa-product-formatter >= 1.11.0
 
 %description
 Provides application executables for L2 QA tools.  These applications are implementated in C.
@@ -73,5 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Mon Nov 28 2016 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.13.0
+* Wed Jan 25 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.15.0
