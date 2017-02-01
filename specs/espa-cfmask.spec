@@ -9,7 +9,7 @@
 %define algorithm cfmask
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname cfmask-version_2.0.1.1
+%define tagname rb-2.0.2
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -18,8 +18,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	2.0.1.1
-Release:	2.%{build_timestamp}
+Version:	2.0.2
+Release:	1.%{build_timestamp}
 Summary:	ESPA Cloud Masking Software - CFmask
 
 Group:		ESPA
@@ -67,7 +67,8 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 # All sub-directories are automatically included
 /usr/local/bin/*
-/usr/local/%{project}
+%dir /usr/local/%{project}
+/usr/local/%{project}/bin
 /usr/local/%{project}/%{algorithm}
 
 
