@@ -8,7 +8,7 @@
 %define project espa-land-surface-temperature
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_v0.1.0
+%define tagname dev_0.1.2
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -17,7 +17,7 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}
-Version:	1.0.1
+Version:	1.0.2
 Release:	1.%{build_timestamp}
 Summary:	ESPA Land Surface Temperature Software
 
@@ -69,5 +69,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Jan 25 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.15.0
+* Wed Feb 08 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.16.0
