@@ -24,7 +24,7 @@ product-formatter: check-environment
 	rpmbuild -bb --clean specs/espa-product-formatter.spec
 
 product-formatter-schemas: check-environment
-	rpmbuild -bb --clean specs/espa-espa-product-formatter-schemas.spec
+	rpmbuild -bb --clean specs/espa-product-formatter-schemas.spec
 
 l2qa-tools: check-environment
 	rpmbuild -bb --clean specs/espa-l2qa-tools.spec
