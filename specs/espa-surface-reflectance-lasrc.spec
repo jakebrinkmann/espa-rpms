@@ -9,7 +9,7 @@
 %define algorithm lasrc
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_lasrc3.5.2
+%define tagname dev_march2017
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -17,8 +17,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	1.0.0
-Release:	2.%{build_timestamp}
+Version:	1.0.1
+Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Reflectance Software - LaSRC
 
 Group:		ESPA
@@ -29,8 +29,8 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.11.0
-Requires:	espa-surface-reflectance >= 1.0.4
+BuildRequires:	espa-product-formatter >= 1.11.1
+Requires:	espa-surface-reflectance >= 1.0.5
 
 %description
 Provides science application executables for generating top-of-atmosphere and surface reflectance products for Landsat 8 data.  These applications are implementated in C and Python.
@@ -72,5 +72,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Feb 08 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.16.0
+* Wed Mar 22 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.17.0
