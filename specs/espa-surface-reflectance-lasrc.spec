@@ -46,7 +46,7 @@ rm -rf %{clonedname}
 git clone --depth 1 --branch %{tagname} %{url} %{clonedname}
 # Build the applications
 cd %{clonedname}
-make all-lasrc BUILD_STATIC=yes
+make all-lasrc BUILD_STATIC=yes ENABLE_THREADING=yes
 
 %install
 # Start with a clean installation location
