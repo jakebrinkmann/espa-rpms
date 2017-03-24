@@ -20,7 +20,7 @@
 Name:		%{project}-%{algorithm}
 Version:	0.1.3
 Release:	1.%{build_timestamp}
-Summary:	ESPA Land Surface Temperature Software - Auxiliary
+Summary:	ESPA Surface Temperature Software - Auxiliary
 
 Group:		ESPA
 License:	NASA Open Source Agreement
