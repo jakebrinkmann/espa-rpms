@@ -3,7 +3,7 @@
 #
 # Project Name: ESPA RPM Building
 #-----------------------------------------------------------------------------
-.PHONY: check-environment all base schemas science install clean product-formatter product-formatter-schemas l2qa-tools cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc land-surface-temperature land-surface-temperature-rit surface-temperature-aux
+.PHONY: check-environment all base schemas science install clean product-formatter product-formatter-schemas l2qa-tools cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc surface-reflectance-lasrc-aux land-surface-temperature land-surface-temperature-rit surface-temperature-aux
 
 all:
 
@@ -13,7 +13,9 @@ schemas: product-formatter-schemas
 
 science: l2qa-tools cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc land-surface-temperature land-surface-temperature-rit
 
-auxiliary: surface-temperature-aux
+lasrc-aux: surface-reflectance-lasrc-aux
+narr-aux: surface-temperature-aux
+auxiliary: narr-aux lasrc-aux
 
 install:
 
@@ -55,6 +57,9 @@ surface-reflectance-ledaps: check-environment
 
 surface-reflectance-lasrc: check-environment
 	rpmbuild -bb --clean specs/espa-surface-reflectance-lasrc.spec
+
+surface-reflectance-lasrc-aux: check-environment
+	rpmbuild -bb --clean specs/espa-surface-reflectance-lasrc-aux.spec
 
 land-surface-temperature: check-environment
 	rpmbuild -bb --clean specs/espa-land-surface-temperature.spec
