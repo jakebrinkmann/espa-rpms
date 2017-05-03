@@ -23,6 +23,7 @@ install:
 clean:
 
 #-----------------------------------------------------------------------------
+#-------- BASE LIBRARIES
 product-formatter: check-environment
 	rpmbuild -bb --clean specs/espa-product-formatter.spec
 
@@ -32,19 +33,19 @@ product-formatter-schemas: check-environment
 l2qa-tools: check-environment
 	rpmbuild -bb --clean specs/espa-l2qa-tools.spec
 
-#--------
+#-------- CLOUD MASKING
 cloud-masking: check-environment
 	rpmbuild -bb --clean specs/espa-cfmask.spec
 
-#--------
+#-------- ELEVATION
 elevation: check-environment
 	rpmbuild -bb --clean specs/espa-elevation.spec
 
-#--------
+#-------- SPECTAL INDICES
 spectral-indices: check-environment
 	rpmbuild -bb --clean specs/espa-spectral-indices.spec
 
-#--------
+#-------- SURFACE WATER EXTENT
 surface-water-extent: check-environment
 	rpmbuild -bb --clean specs/espa-surface-water-extent.spec
 
@@ -54,7 +55,7 @@ surface-water-extent-dswe: check-environment
 surface-water-extent-cfbwd: check-environment
 	rpmbuild -bb --clean specs/espa-surface-water-extent-cfbwd.spec
 
-#--------
+#-------- SURFACE REFLECTANCE
 surface-reflectance: check-environment
 	rpmbuild -bb --clean specs/espa-surface-reflectance.spec
 
@@ -70,7 +71,7 @@ surface-reflectance-lasrc: check-environment
 surface-reflectance-lasrc-aux: check-environment
 	rpmbuild -bb --clean specs/espa-surface-reflectance-lasrc-aux.spec
 
-#--------
+#-------- SURFACE TEMPERATURE
 surface-temperature: check-environment
 	rpmbuild -bb --clean specs/espa-surface-temperature.spec
 
