@@ -73,5 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Mon May 03 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+* Wed May 03 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
 - Initial Version for ESPA 2.18.0.aux
