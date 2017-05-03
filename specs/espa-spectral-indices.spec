@@ -18,7 +18,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}
 Version:	2.5.0
-Release:	7.%{build_timestamp}
+Release:	8.%{build_timestamp}
 Summary:	ESPA Spectral Indices Software
 
 Group:		ESPA
@@ -29,7 +29,7 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.11.1
+BuildRequires:	espa-product-formatter >= 1.12.0
 
 %description
 Provides science application executables for generating spectral index products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
@@ -71,5 +71,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Mar 22 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.17.0
+* Wed May 03 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.18.0
