@@ -5,8 +5,8 @@
 #     particular release to build an RPM for.
 
 
-%define project espa-land-surface-temperature
-%define algorithm rit
+%define project espa-surface-temperature
+%define installed_dirname espa-land-surface-temperature
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
 %define tagname dev_0.1.4
@@ -17,10 +17,10 @@
 
 
 # ----------------------------------------------------------------------------
-Name:		%{project}-%{algorithm}
-Version:	0.1.4
+Name:		%{project}
+Version:	1.0.4
 Release:	1.%{build_timestamp}
-Summary:	ESPA Land Surface Temperature Software - RIT
+Summary:	ESPA Land Surface Temperature Software
 
 Group:		ESPA
 License:	NASA Open Source Agreement
@@ -30,12 +30,8 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.12.0
-Requires:	espa-land-surface-temperature >= 1.0.4
-
 %description
-Provides science application executables for generating land surface temperature products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
-
+Provides science application executables for generating land surface temperature products for Landsat 4, 5, 7, and 8.  These applications are implemented in Python.
 
 # ----------------------------------------------------------------------------
 %prep
@@ -47,14 +43,14 @@ rm -rf %{clonedname}
 git clone --depth 1 --branch %{tagname} %{url} %{clonedname}
 # Build the applications
 cd %{clonedname}
-make all-rit BUILD_STATIC=yes ENABLE_THREADING=yes
+make all-script BUILD_STATIC=yes
 
 %install
 # Start with a clean installation location
 rm -rf %{buildroot}
 # Install the applications for a specific path
 cd %{clonedname}
-make install-rit PREFIX=%{buildroot}/usr/local
+make install-script PREFIX=%{buildroot}/usr/local
 
 %clean
 # Cleanup our cloned repository
@@ -68,7 +64,8 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 # All sub-directories are automatically included
 /usr/local/bin/*
-/usr/local/%{project}/lst
+%dir /usr/local/%{installed_dirname}
+/usr/local/%{installed_dirname}/bin
 
 
 # ----------------------------------------------------------------------------

@@ -6,7 +6,7 @@
 
 
 %define project espa-surface-temperature
-%define land_project espa-land-surface-temperature
+%define installed_dirname espa-land-surface-temperature
 %define algorithm aux
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
@@ -31,7 +31,7 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-Requires:	espa-land-surface-temperature >= 1.0.4
+Requires:	espa-surface-temperature >= 1.0.4
 
 %description
 Provides auxiliary data ingest required for generating surface temperature products for Landsat 4, 5, 7, and 8.  Implemented in Python.
@@ -68,7 +68,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 # All sub-directories are automatically included
 /usr/local/bin/*
-/usr/local/%{land_project}/auxiliary
+/usr/local/%{installed_dirname}/auxiliary
 
 
 # ----------------------------------------------------------------------------
