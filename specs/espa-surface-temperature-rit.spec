@@ -32,7 +32,7 @@ BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
 BuildRequires:	espa-product-formatter >= 1.12.0
-Requires:	espa-land-surface-temperature >= 1.0.4
+Requires:	espa-surface-temperature >= 1.0.4
 
 %description
 Provides science application executables for generating land surface temperature products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
