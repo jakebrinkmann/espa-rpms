@@ -19,7 +19,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
 Version:	1.1.3
-Release:	2.%{build_timestamp}
+Release:	3.%{build_timestamp}
 Summary:	ESPA Surface Water Extent Software - DSWE
 
 Group:		ESPA
@@ -30,7 +30,7 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.12.0
+BuildRequires:	espa-product-formatter >= 1.13.0
 Requires:	espa-surface-water-extent >= 1.0.3
 
 %description
@@ -73,5 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed May 03 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.18.0
+* Wed May 24 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.19.0
