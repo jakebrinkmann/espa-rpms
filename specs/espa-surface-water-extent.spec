@@ -18,7 +18,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}
 Version:	1.0.3
-Release:	2.%{build_timestamp}
+Release:	3.%{build_timestamp}
 Summary:	ESPA Surface Water Extent Software
 
 Group:		ESPA
@@ -70,5 +70,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed May 03 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.18.0
+* Wed May 24 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.19.0
