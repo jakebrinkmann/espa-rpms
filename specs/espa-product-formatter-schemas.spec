@@ -8,7 +8,7 @@
 %define algorithm schemas
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_v1.12.0
+%define tagname dev_v1.13.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -19,7 +19,7 @@ Name:		%{project}-%{algorithm}
 # This version represents the schema version, and not the
 # espa-product-formatter version.
 Version:	2.0.0
-Release:	3.%{build_timestamp}
+Release:	4.%{build_timestamp}
 Summary:	ESPA Metadata Schemas
 
 Group:		ESPA
@@ -68,5 +68,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed May 03 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.18.0
+* Wed May 24 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.19.0
