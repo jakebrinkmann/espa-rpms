@@ -18,7 +18,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}
 Version:	1.5.0
-Release:	1.%{build_timestamp}
+Release:	2.%{build_timestamp}
 Summary:	ESPA L2QA Tools Software
 
 Group:		ESPA
@@ -73,5 +73,7 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
+* Thu May 25 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Recompile for missing code, recently pushed to GitHub.
 * Wed May 24 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
 - Initial Version for ESPA 2.19.0
