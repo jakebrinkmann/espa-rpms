@@ -3,7 +3,7 @@
 #
 # Project Name: ESPA RPM Building
 #-----------------------------------------------------------------------------
-.PHONY: check-environment all base schemas science install clean product-formatter product-formatter-schemas l2qa-tools cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-ledaps-aux surface-reflectance-lasrc surface-reflectance-lasrc-aux surface-temperature surface-temperature-rit surface-temperature-aux
+.PHONY: check-environment all base schemas science install clean product-formatter product-formatter-schemas l2qa-tools cloud-masking elevation reprojection spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-ledaps-aux surface-reflectance-lasrc surface-reflectance-lasrc-aux surface-temperature surface-temperature-rit surface-temperature-aux
 
 all:
 
@@ -11,7 +11,7 @@ base: product-formatter
 
 schemas: product-formatter-schemas
 
-science: l2qa-tools cloud-masking elevation spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc surface-temperature surface-temperature-rit
+science: l2qa-tools cloud-masking elevation reprojection spectral-indices surface-water-extent surface-water-extent-dswe surface-water-extent-cfbwd surface-reflectance surface-reflectance-ledaps surface-reflectance-lasrc surface-temperature surface-temperature-rit
 
 lasrc-aux: surface-reflectance-lasrc-aux
 ledaps-aux: surface-reflectance-ledaps-aux
@@ -40,6 +40,10 @@ cloud-masking: check-environment
 #-------- ELEVATION
 elevation: check-environment
 	rpmbuild -bb --clean specs/espa-elevation.spec
+
+#-------- REPROJECTION
+reprojection: check-environment
+	rpmbuild -bb --clean specs/espa-reprojection.spec
 
 #-------- SPECTAL INDICES
 spectral-indices: check-environment
