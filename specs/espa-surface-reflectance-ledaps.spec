@@ -19,7 +19,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
 Version:	3.2.0
-Release:	2.%{build_timestamp}
+Release:	3.%{build_timestamp}
 Summary:	ESPA Surface Reflectance Software - LEDAPS
 
 Group:		ESPA
@@ -73,5 +73,6 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Fri Jun 30 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+* Mon Jul 3 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Rebuild Version for ESPA 2.20.1
 - Initial Version for ESPA 2.20.1

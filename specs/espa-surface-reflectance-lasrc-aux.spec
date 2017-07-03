@@ -19,7 +19,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
 Version:	1.2.1
-Release:	1.%{build_timestamp}
+Release:	2.%{build_timestamp}
 Summary:	ESPA Surface Reflectance Software - LaSRC - Auxiliary
 
 Group:		ESPA
@@ -73,5 +73,6 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Fri Jun 30 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+* Mon Jul 3 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Rebuild Version for ESPA 2.20.1.aux
 - Initial Version for ESPA 2.20.1.aux
