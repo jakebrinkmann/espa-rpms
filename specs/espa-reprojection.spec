@@ -8,7 +8,7 @@
 %define project espa-reprojection
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname rb-1.0.0
+%define tagname rb-v1.0.1
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -17,8 +17,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}
-Version:	1.0.0
-Release:	2.%{build_timestamp}
+Version:	1.0.1
+Release:	1.%{build_timestamp}
 Summary:	ESPA Reprojection Software
 
 Group:		ESPA
@@ -69,5 +69,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Tue Jun 06 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.20.0
+* Tue Jul 11 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
+- Initial Version for ESPA 2.20.2
