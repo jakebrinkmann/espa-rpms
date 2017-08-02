@@ -10,7 +10,7 @@
 %define algorithm ledaps-aux
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_lasrc_v1.2.1
+%define tagname dev_lasrc_v1.2.2
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -18,8 +18,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	3.2.0
-Release:	3.%{build_timestamp}
+Version:	3.2.1
+Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Reflectance Software - Ledaps - Auxiliary
 
 Group:		ESPA
@@ -30,8 +30,8 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.13.0
-Requires:	espa-surface-reflectance >= 1.0.8
+BuildRequires:	espa-product-formatter >= 1.13.1
+Requires:	espa-surface-reflectance >= 1.0.9
 
 %description
 Provides software to update and archive auxiliary input to LaSRC processing.
@@ -73,6 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Mon Jul 3 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Rebuild Version for ESPA 2.20.1.aux
-- Initial Version for ESPA 2.20.1.aux
+* Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.22.0
