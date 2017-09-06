@@ -8,7 +8,7 @@
 %define project espa-l2qa-tools
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname l2qa_tools_v1.5.0
+%define tagname dev_v1.6.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -17,8 +17,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}
-Version:	1.5.0
-Release:	3.%{build_timestamp}
+Version:	1.6.0
+Release:	1.%{build_timestamp}
 Summary:	ESPA L2QA Tools Software
 
 Group:		ESPA
@@ -73,9 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Rebuild Version for ESPA 2.22.0
-* Thu May 25 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Recompile for missing code, recently pushed to GitHub.
-* Wed May 24 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.19.0
+* Wed Sep 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.23.0

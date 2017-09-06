@@ -10,7 +10,7 @@
 %define algorithm lasrc-aux
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_lasrc_v1.2.2
+%define tagname dev_lasrc_opt_minsu
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -18,7 +18,7 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	1.2.2
+Version:	1.3.0
 Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Reflectance Software - LaSRC - Auxiliary
 
@@ -31,7 +31,7 @@ BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
 BuildRequires:	espa-product-formatter >= 1.13.1
-Requires:	espa-surface-reflectance >= 1.0.9
+Requires:	espa-surface-reflectance >= 1.0.10
 
 %description
 Provides software to update and archive auxiliary input to LaSRC processing.
@@ -73,5 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Initial Version for ESPA 2.22.0
+* Wed Sep 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.23.0
