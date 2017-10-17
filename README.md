@@ -9,6 +9,7 @@ This project contains the RPM Spec files used for building our ESPA RPMS.  We on
 Please see the Release Tags for notes related to past versions.
 
 - Updated Spec files for ESPA 2.24.0 release.
+- Switch to "surface temperature" terminology
 
 ## Build Notes
 A simple Makefile is provided for building each RPM.
