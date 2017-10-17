@@ -6,11 +6,11 @@
 
 
 %define project espa-surface-temperature
-%define installed_dirname espa-land-surface-temperature
+%define installed_dirname espa-surface-temperature
 %define algorithm rit
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_0.3.1
+%define tagname dev_0.4
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -21,11 +21,11 @@
 Name:		%{project}-%{algorithm}
 Version:	0.3.1
 Release:	1.%{build_timestamp}
-Summary:	ESPA Land Surface Temperature Software - RIT
+Summary:	ESPA Surface Temperature Software - RIT
 
 Group:		ESPA
 License:	NASA Open Source Agreement
-URL:		https://github.com/USGS-EROS/espa-land-surface-temperature.git
+URL:		https://github.com/USGS-EROS/espa-surface-temperature.git
 
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
@@ -35,7 +35,7 @@ BuildRequires:	espa-product-formatter >= 1.13.1
 Requires:	espa-surface-temperature >= 1.0.6
 
 %description
-Provides science application executables for generating land surface temperature products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
+Provides science application executables for generating surface temperature products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
 
 
 # ----------------------------------------------------------------------------
@@ -69,7 +69,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 # All sub-directories are automatically included
 /usr/local/bin/*
-/usr/local/%{installed_dirname}/lst
+/usr/local/%{installed_dirname}/st
 
 
 # ----------------------------------------------------------------------------
