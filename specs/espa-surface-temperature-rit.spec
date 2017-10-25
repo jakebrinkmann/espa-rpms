@@ -19,7 +19,7 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	0.3.1
+Version:	0.4.0
 Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Temperature Software - RIT
 
@@ -32,7 +32,7 @@ BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
 BuildRequires:	espa-product-formatter >= 1.13.1
-Requires:	espa-surface-temperature >= 1.0.6
+Requires:	espa-surface-temperature >= 1.0.7
 
 %description
 Provides science application executables for generating surface temperature products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
@@ -74,5 +74,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Initial Version for ESPA 2.22.0
+* Wed Oct 25 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.25.0

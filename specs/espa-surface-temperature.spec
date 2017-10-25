@@ -18,7 +18,7 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}
-Version:	1.0.6
+Version:	1.0.7
 Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Temperature Software
 
@@ -70,5 +70,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Initial Version for ESPA 2.22.0
+* Wed Oct 25 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.25.0
