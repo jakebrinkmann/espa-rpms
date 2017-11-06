@@ -70,5 +70,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Oct 25 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+* Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
 - Initial Version for ESPA 2.25.0

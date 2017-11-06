@@ -9,7 +9,7 @@
 %define algorithm ledaps
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_lasrc_opt_minsu
+%define tagname surface_reflectance_sept2017
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -19,7 +19,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
 Version:	3.2.1
-Release:	2.%{build_timestamp}
+Release:	3.%{build_timestamp}
 Summary:	ESPA Surface Reflectance Software - LEDAPS
 
 Group:		ESPA
@@ -30,8 +30,8 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.13.1
-Requires:	espa-surface-reflectance >= 1.0.10
+BuildRequires:	espa-product-formatter >= 1.14.0
+Requires:	espa-surface-reflectance >= 1.0.11
 
 %description
 Provides science application executables for generating top-of-atmosphere and surface reflectance products for Landsat 4, 5, and 7 data.  These applications are mostly implementated in C and Python with some shell scripts.
@@ -73,6 +73,8 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
+* Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Rebuild Version for ESPA 2.25.0
 * Wed Sep 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
 - Rebuild Version for ESPA 2.23.0
 * Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>

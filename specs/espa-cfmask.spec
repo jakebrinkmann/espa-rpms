@@ -19,7 +19,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
 Version:	2.0.2
-Release:	5.%{build_timestamp}
+Release:	6.%{build_timestamp}
 Summary:	ESPA Cloud Masking Software - CFmask
 
 Group:		ESPA
@@ -30,7 +30,7 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.13.1
+BuildRequires:	espa-product-formatter >= 1.14.0
 
 %description
 Provides science application executables for generating cloud masking products for Landsat 4, 5, 7, and 8.  These applications are implementated in C and Python.
@@ -74,6 +74,8 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
+* Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Rebuild Version for ESPA 2.25.0
 * Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
 - Rebuild Version for ESPA 2.22.0
 * Wed May 24 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>

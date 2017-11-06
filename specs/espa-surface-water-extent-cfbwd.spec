@@ -9,7 +9,7 @@
 %define algorithm cfbwd
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_2.1
+%define tagname dev_2.2
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -19,7 +19,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
 Version:	1.1.0
-Release:	6.%{build_timestamp}
+Release:	7.%{build_timestamp}
 Summary:	ESPA Surface Water Extent Software - CFBWD
 
 Group:		ESPA
@@ -30,8 +30,8 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.13.1
-Requires:	espa-surface-water-extent >= 1.0.5
+BuildRequires:	espa-product-formatter >= 1.14.0
+Requires:	espa-surface-water-extent >= 1.0.6
 
 %description
 Provides science application executables for generating surface water extent products based on CFmask water detection for Landsat 4, 5, 7, and 8.  This application is implementated in C.
@@ -73,6 +73,8 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
+* Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Rebuild Version for ESPA 2.25.0
 * Thu Sep 21 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
 - Rebuild Version for ESPA 2.24.0
 * Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
