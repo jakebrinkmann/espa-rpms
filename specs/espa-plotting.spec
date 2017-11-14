@@ -18,7 +18,7 @@
 # ----------------------------------------------------------------------------
 Name:		%{project}
 Version:	0.1.0
-Release:	1.%{build_timestamp}
+Release:	2.%{build_timestamp}
 Summary:	ESPA Plotting and Statistics Software
 
 Group:		ESPA
@@ -69,5 +69,7 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
+* Tue Nov 14 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Rebuild Version for ESPA 2.25.0
 * Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
 - Initial Version for ESPA 2.25.0
