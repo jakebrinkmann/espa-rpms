@@ -6,11 +6,11 @@
 
 
 %define project espa-surface-temperature
-%define installed_dirname espa-land-surface-temperature
+%define installed_dirname espa-surface-temperature
 %define algorithm aux
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_0.3.1
+%define tagname dev_0.4
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -19,19 +19,19 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	0.3.1
+Version:	0.4.0
 Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Temperature Software - Auxiliary
 
 Group:		ESPA
 License:	NASA Open Source Agreement
-URL:		https://github.com/USGS-EROS/espa-land-surface-temperature.git
+URL:		https://github.com/USGS-EROS/espa-surface-temperature.git
 
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-Requires:	espa-surface-temperature >= 1.0.6
+Requires:	espa-surface-temperature >= 1.0.7
 
 %description
 Provides auxiliary data ingest required for generating surface temperature products for Landsat 4, 5, 7, and 8.  Implemented in Python.
@@ -73,5 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Initial Version for ESPA 2.22.0
+* Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.25.0

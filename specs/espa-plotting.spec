@@ -5,12 +5,10 @@
 #     particular release to build an RPM for.
 
 
-%define project espa-surface-temperature
-%define installed_dirname espa-surface-temperature
-%define algorithm rit
+%define project espa-plotting
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_0.4
+%define tagname rb-0.1.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -18,24 +16,21 @@
 
 
 # ----------------------------------------------------------------------------
-Name:		%{project}-%{algorithm}
-Version:	0.4.0
-Release:	2.%{build_timestamp}
-Summary:	ESPA Surface Temperature Software - RIT
+Name:		%{project}
+Version:	0.1.0
+Release:	3.%{build_timestamp}
+Summary:	ESPA Plotting and Statistics Software
 
 Group:		ESPA
 License:	NASA Open Source Agreement
-URL:		https://github.com/USGS-EROS/espa-surface-temperature.git
+URL:		https://github.com/USGS-EROS/espa-plotting.git
 
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.14.0
-Requires:	espa-surface-temperature >= 1.0.7
-
 %description
-Provides science application executables for generating surface temperature products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
+Provides executables for statitics summary and subsequent plotting of ESPA Raw Binary formatted data.
 
 
 # ----------------------------------------------------------------------------
@@ -48,14 +43,14 @@ rm -rf %{clonedname}
 git clone --depth 1 --branch %{tagname} %{url} %{clonedname}
 # Build the applications
 cd %{clonedname}
-make all-rit BUILD_STATIC=yes ENABLE_THREADING=yes
+make
 
 %install
 # Start with a clean installation location
 rm -rf %{buildroot}
 # Install the applications for a specific path
 cd %{clonedname}
-make install-rit PREFIX=%{buildroot}/usr/local
+make install PREFIX=%{buildroot}/usr/local
 
 %clean
 # Cleanup our cloned repository
@@ -69,11 +64,13 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 # All sub-directories are automatically included
 /usr/local/bin/*
-/usr/local/%{installed_dirname}/st
+/usr/local/%{name}
 
 
 # ----------------------------------------------------------------------------
 %changelog
+* Tue Nov 14 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Second Rebuild Version for ESPA 2.25.0
 * Tue Nov 14 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
 - Rebuild Version for ESPA 2.25.0
 * Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>

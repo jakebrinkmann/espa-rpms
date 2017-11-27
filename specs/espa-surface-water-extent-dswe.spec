@@ -9,7 +9,7 @@
 %define algorithm dswe
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_2.1
+%define tagname dev_2.2
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -18,7 +18,7 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	2.1.0
+Version:	2.2.0
 Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Water Extent Software - DSWE
 
@@ -30,8 +30,8 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.13.1
-Requires:	espa-surface-water-extent >= 1.0.5
+BuildRequires:	espa-product-formatter >= 1.14.0
+Requires:	espa-surface-water-extent >= 1.0.6
 
 %description
 Provides science application executables for generating surface water extent products for Landsat 4, 5, 7, and 8.  This application is implementated in C.
@@ -73,5 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Thu Sep 21 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Initial Version for ESPA 2.24.0
+* Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.25.0

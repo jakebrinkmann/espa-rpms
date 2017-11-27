@@ -8,7 +8,7 @@
 %define project espa-surface-reflectance
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_lasrc_opt_minsu
+%define tagname surface_reflectance_sept2017
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -17,7 +17,7 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}
-Version:	1.0.10
+Version:	1.0.11
 Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Reflectance Software
 
@@ -70,5 +70,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Wed Sep 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Initial Version for ESPA 2.23.0
+* Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.25.0
