@@ -10,7 +10,7 @@
 %define algorithm rit
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_0.4
+%define tagname dev_1.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -19,8 +19,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	0.4.0
-Release:	2.%{build_timestamp}
+Version:	1.0.0
+Release:	1.%{build_timestamp}
 Summary:	ESPA Surface Temperature Software - RIT
 
 Group:		ESPA
@@ -32,7 +32,7 @@ BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
 BuildRequires:	espa-product-formatter >= 1.14.0
-Requires:	espa-surface-temperature >= 1.0.7
+Requires:	espa-surface-temperature >= 1.0.8
 
 %description
 Provides science application executables for generating surface temperature products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
@@ -74,7 +74,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Tue Nov 14 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Rebuild Version for ESPA 2.25.0
-* Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Initial Version for ESPA 2.25.0
+* Wed Jan 3 2018 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.26.0
