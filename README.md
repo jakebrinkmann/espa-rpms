@@ -1,6 +1,6 @@
-## ESPA RPMS Version 2.25.0 Release Notes
+## ESPA RPMS Version 2.26.0 Release Notes
 
-See git tag [v2.25.0]
+See git tag [v2.26.0]
 
 ### General Information
 This project contains the RPM Spec files used for building our ESPA RPMS.  We only update the Spec files for the sub-projects modified for a specific ESPA release.  And then only build and install those during the release procedure.
@@ -8,9 +8,7 @@ This project contains the RPM Spec files used for building our ESPA RPMS.  We on
 ## Release Notes
 Please see the Release Tags for notes related to past versions.
 
-- Updated Spec files for ESPA 2.25.0 release.
-- Switch to "surface temperature" terminology
-- Add espa-plotting library
+- Updated Spec files for ESPA 2.26.0 release.
 
 ## Build Notes
 A simple Makefile is provided for building each RPM.
