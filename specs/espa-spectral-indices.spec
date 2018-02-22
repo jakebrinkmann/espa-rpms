@@ -8,7 +8,7 @@
 %define project espa-spectral-indices
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname spectral_indices_v2.6.0
+%define tagname dev_v2.7.0
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -17,8 +17,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}
-Version:	2.6.0
-Release:	3.%{build_timestamp}
+Version:	2.7.0
+Release:	1.%{build_timestamp}
 Summary:	ESPA Spectral Indices Software
 
 Group:		ESPA
@@ -29,7 +29,7 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
-BuildRequires:	espa-product-formatter >= 1.14.0
+BuildRequires:	espa-product-formatter >= 1.15.0
 
 %description
 Provides science application executables for generating spectral index products for Landsat 4, 5, 7, and 8.  These applications are implemented in C and Python.
@@ -71,9 +71,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Mon Nov 6 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Rebuild Version for ESPA 2.25.0
-* Wed Aug 2 2017 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Rebuild Version for ESPA 2.22.0
-* Wed May 24 2017 Ronald D Dilley <ronald.dilley.ctr@usgs.gov>
-- Initial Version for ESPA 2.19.0
+* Thu Feb 22 2018 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.27.0
