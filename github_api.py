@@ -1,14 +1,14 @@
 #!/usr/bin/env python
-import urllib3, os, shutil, time, tempfile
+import urllib3, os, shutil, time, tempfile, getpass, base64
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 import requests
 import git
 BASE_URL = 'https://api.github.com/'
 
-def github(endpoint, data=None, verb='get'):
+def github(endpoint, data=None, verb='get', creds=''):
     url = BASE_URL + endpoint + '?per_page=100'
-    headers = {"Authorization": "Basic invalidlogin"}
+    headers = {"Authorization": "Basic %s" % base64.b64encode(creds)}
     res = getattr(requests, verb)(url, data=data, verify=False, headers=headers)
     res.raise_for_status()
     return res.json()
@@ -31,7 +31,8 @@ def get_repo_tags(full_name, git_url):
         pass
     return tags
 
-repos_list = github('orgs/USGS-EROS/repos')
+creds = '{}:{}'.format(raw_input("Username: "), getpass.getpass())
+repos_list = github('orgs/USGS-EROS/repos', creds=creds)
 
 for repo in repos_list:
     name = repo['name']
@@ -39,13 +40,13 @@ for repo in repos_list:
         continue
 
     pulls_url = plnk(repo['pulls_url'])
-    pulls_list = github(pulls_url)
+    pulls_list = github(pulls_url, creds=creds)
 
     releases_url = plnk(repo['releases_url'])
-    releases_list = github(releases_url)
+    releases_list = github(releases_url, creds=creds)
 
     tags_url = plnk(repo['tags_url'])
-    tags_list = github(tags_url)
+    tags_list = github(tags_url, creds=creds)
 
     if len(pulls_list) > 0:
         print('>>> {}: has {} open pulls'.format(name, len(pulls_list)))
