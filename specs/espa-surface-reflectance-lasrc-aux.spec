@@ -31,7 +31,7 @@ BuildArch:	x86_64
 Packager:	USGS EROS LSRD
 
 BuildRequires:	espa-product-formatter >= 1.15.0
-Requires:	espa-surface-reflectance >= 1.0.14
+Requires:	espa-surface-reflectance >= 1.0.13
 
 %description
 Provides software to update and archive auxiliary input to LaSRC processing.
