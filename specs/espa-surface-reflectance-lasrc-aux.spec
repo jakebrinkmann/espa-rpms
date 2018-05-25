@@ -10,7 +10,7 @@
 %define algorithm lasrc-aux
 %define build_timestamp %(date +"%%Y%%m%%d%%H%%M%%S")
 # Specify the repository tag/branch to clone and build from
-%define tagname dev_march2018
+%define tagname dev_may2018
 # Specify the name of the directory to clone into
 %define clonedname %{name}-%{tagname}
 # Change the default rpm name format for the rpm built by this spec file
@@ -18,8 +18,8 @@
 
 # ----------------------------------------------------------------------------
 Name:		%{project}-%{algorithm}
-Version:	1.4.0
-Release:	1.%{build_timestamp}
+Version:	1.4.1
+Release:	2.%{build_timestamp}
 Summary:	ESPA Surface Reflectance Software - LaSRC - Auxiliary
 
 Group:		ESPA
@@ -73,5 +73,5 @@ rm -rf %{buildroot}
 
 # ----------------------------------------------------------------------------
 %changelog
-* Thu Feb 22 2018 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
-- Initial Version for ESPA 2.27.0
+* Fri May 25 2018 Jake Brinkmann <jacob.brinkmann.ctr@usgs.gov>
+- Initial Version for ESPA 2.27.2
